@@ -16,16 +16,20 @@
     if(!empty($games)){
         foreach ($games as $game):
             $score=$game['score'];
-            $time=$game['time'];
-            $date=$game['date'];
+            if(!is_numeric($game['score']) or 
+            !is_numeric($game['time']) or !is_numeric($game['date'])){
+                continue;
+            }
+            $time= date("H:i:s", ((int)$game['time']/1000));;
+            $date= date("d-m-Y H:i:s", ((int)$game['date']/1000));;
             $device=$game['device'];
     ?>      
         
         <tr id="pointsField">
         <td style="" class="first"><?= $time ?></td>
         <td class="first"><?= $date ?></td>
-        <td class="first"><input type="text" name="field1-1"  id="1-1" value="<?= $score ?>" readonly ></td>
-        <td><input type="text"  name="field1-2"  id="1-2" value="<?= $device ?>" readonly></td>
+        <td class="first"><?= $score ?></td>
+        <td><?= $device ?></td>
         </tr>
         
     <?php endforeach; } ?>
