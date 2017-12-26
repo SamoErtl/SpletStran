@@ -1,12 +1,12 @@
 body {
 	font-family: Arial;
-    background-color: lightgoldenrodyellow;
+    background-color: darkcyan;
 }
 table {
 	border-collapse: collapse;
 	margin: auto;
-	width: 35%;
-	border: 1px solid darkcyan;
+	/*width: 60%;*/
+	border: 1px solid rgb(14, 194, 194);
 }
 
 table.login {
@@ -68,7 +68,7 @@ header {
 	color: black;
 	margin: auto;
 	width: 100%;
-	background-color: lightcoral;
+	background-color: darkmagenta;
 }
 input[type=text]{
     border: none;
