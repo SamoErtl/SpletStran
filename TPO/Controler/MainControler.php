@@ -4,7 +4,7 @@ require_once("Model/tdJson.php");
 //require_once("model/User.php");
 require_once("ViewHelper.php");
 
-class BowlController {
+class MainController {
 
     public static function index() {
         ViewHelper::render("view/td-list.php", [
