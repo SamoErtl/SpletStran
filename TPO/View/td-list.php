@@ -10,8 +10,15 @@
 
 <p></p>
 <h1 id="center" >All games</h1>
+
 <table id="td-table">
         <tbody>
+        <tr id="pointsField">
+        <td style="" >Čas</td>
+        <td >Datum</td>
+        <td >Točke</td>
+        <td>Naprava</td>
+        </tr>
     <?php 
     if(!empty($games)){
         foreach ($games as $game):
@@ -20,8 +27,9 @@
                 continue;
             }
             $score=$game['score'];
-            $time= date("H:i:s", ((float)$game['time']/1000));
-            $time= (float)$game['time'];
+            /*$time= date("H:i:s", ((float)$game['time']/1000));*/
+            $time= (float)$game['time'] /1000000000;
+            $time = date("i:s", $time);
             $date= date("d-m-Y H:i:s", ((float)$game['date']/1000));
             //$date= (float)$game['date']/1000;
             $device=$game['device'];
