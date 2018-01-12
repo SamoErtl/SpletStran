@@ -29,7 +29,8 @@
             $score=$game['score'];
             /*$time= date("H:i:s", ((float)$game['time']/1000));*/
             $time= (float)$game['time'] /1000000000;
-            $time = date("i:s", $time);
+            $time =date("i:s", $time);
+            
             $date= date("d-m-Y H:i:s", ((float)$game['date']/1000));
             //$date= (float)$game['date']/1000;
             $device=$game['device'];
